@@ -7,12 +7,15 @@
 
 'use strict';
 
-const path = require( 'path' );
-const { bundler } = require( '@ckeditor/ckeditor5-dev-utils' );
-const buildConfig = require( '../build-config' );
+const path = require('path');
+const { bundler } = require('@ckeditor/ckeditor5-dev-utils');
+const buildConfig = require('../build-config');
+const fs = require('fs-extra');
 
-console.log( 'Creating the entry file...' );
+console.log('Creating the entry file...');
 
-bundler.createEntryFile( path.join( 'src', 'ckeditor.js' ), buildConfig );
+var entryFile = path.join('src', 'ckeditor.js');
+fs.ensureFileSync(entryFile);
+bundler.createEntryFile(entryFile, buildConfig );
 
-console.log( 'Done.' );
+console.log('Done.');
