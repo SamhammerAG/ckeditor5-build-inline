@@ -1,5 +1,5 @@
 {
-  "name": "@ckeditor/ckeditor5-build-inline",
+  "name": "@samhammer/ckeditor5-build-inline",
   "version": "10.1.0",
   "description": "CKEditor 5 inline editor build.",
   "keywords": [
@@ -59,13 +59,13 @@
     "node": ">=6.0.0",
     "npm": ">=3.0.0"
   },
-  "author": "CKSource (http://cksource.com/)",
+  "author": "CKSource (http://cksource.com/), SamhammerAG (https://www.samhammer.de/)",
   "license": "GPL-2.0-or-later",
   "homepage": "https://ckeditor.com",
-  "bugs": "https://github.com/ckeditor/ckeditor5-build-inline/issues",
+  "bugs": "https://github.com/SamhammerAG/ckeditor5-build-inline/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5-build-inline.git"
+    "url": "https://github.com/SamhammerAG/ckeditor5-build-inline.git"
   },
   "scripts": {
     "build": "npm run create-entry-file && npm run build-ckeditor",
