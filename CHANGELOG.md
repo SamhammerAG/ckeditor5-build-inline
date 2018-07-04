@@ -1,6 +1,19 @@
 Changelog
 =========
 
+## [10.1.1] (2018-07-04)
+
+### Features
+
+* Added the table feature to the build.
+
+### Dependencies
+
+New packages:
+
+* [@ckeditor/ckeditor5-table](https://www.npmjs.com/package/@ckeditor/ckeditor5-table): [v10.0.0](https://github.com/ckeditor/ckeditor5-table/releases/tag/v10.0.0)
+
+
 ## [10.1.0](https://github.com/ckeditor/ckeditor5-build-inline/compare/v10.0.1...v10.1.0) (2018-06-21)
 
 This is a minor release that introduces many bug fixes and new features (most notable one is support for inserting soft breaks with <kbd>Shift</kbd>+<kbd>Enter</kbd>).

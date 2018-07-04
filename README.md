@@ -11,13 +11,10 @@ First, install the build from npm:
 npm install --save @samhammer/ckeditor5-build-inline
 ```
 
-Or in your JavaScript application:
+Include in your JavaScript application:
 
 ```js
 import InlineEditor from '@samhammer/ckeditor5-build-inline';
-
-// Or using the CommonJS version:
-// const InlineEditor = require( '@samhammer/ckeditor5-build-inline' );
 
 InlineEditor
 	.create(document.querySelector('#editor'))
