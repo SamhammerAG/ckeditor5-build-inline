@@ -181,6 +181,15 @@
     "@ckeditor/ckeditor5-ui" "^10.1.0"
     "@ckeditor/ckeditor5-utils" "^10.1.0"
 
+"@ckeditor/ckeditor5-table@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-table/-/ckeditor5-table-10.0.0.tgz#79acaad4c61ca8789cfa7a12fd1c0295fffd4737"
+  dependencies:
+    "@ckeditor/ckeditor5-core" "^10.1.0"
+    "@ckeditor/ckeditor5-engine" "^10.1.0"
+    "@ckeditor/ckeditor5-ui" "^10.1.0"
+    "@ckeditor/ckeditor5-widget" "^10.1.0"
+
 "@ckeditor/ckeditor5-theme-lark@^10.1.0":
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-theme-lark/-/ckeditor5-theme-lark-10.1.0.tgz#47cbc0e5006cd5f24dedae39bb846250cd5dff42"
