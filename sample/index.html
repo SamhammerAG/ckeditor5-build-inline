@@ -9,6 +9,7 @@
 			margin: 20px auto;
 		}
 	</style>
+	<link rel="stylesheet" href="../build/ckeditor.css" />
 </head>
 <body>
 
@@ -27,8 +28,9 @@
 </div>
 
 <script src="../build/ckeditor.js"></script>
+<script src="../build/translations/de.js"></script>
 <script>
-	InlineEditor.create(document.querySelector('#editor'))
+	InlineEditor.create(document.querySelector('#editor'), {language: 'de'})
 		.then(editor => {
 			window.editor = editor;
 		})
