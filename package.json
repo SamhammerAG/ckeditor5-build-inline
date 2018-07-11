@@ -1,6 +1,6 @@
 {
   "name": "@samhammer/ckeditor5-build-inline",
-  "version": "10.1.1",
+  "version": "10.1.2",
   "description": "The inline editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -41,10 +41,10 @@
     "@ckeditor/ckeditor5-paragraph": "^10.0.1",
     "@ckeditor/ckeditor5-table": "^10.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^10.1.0",
-	"@ckeditor/ckeditor5-upload": "^10.0.1",
-	"css-loader": "^0.28.11",
-	"fs-extra": "^6.0.1",
-	"mini-css-extract-plugin": "^0.4.1",
+    "@ckeditor/ckeditor5-upload": "^10.0.1",
+    "css-loader": "^0.28.11",
+    "fs-extra": "^6.0.1",
+    "mini-css-extract-plugin": "^0.4.1",
     "postcss-loader": "^2.1.5",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.21.0",
@@ -53,7 +53,7 @@
     "webpack-cli": "^3.0.8"
   },
   "resolutions": {
-	"@ckeditor/**/@ckeditor/ckeditor5-dev-utils": "npm:@samhammer/ckeditor5-dev-utils@10.0.1"
+    "@ckeditor/**/@ckeditor/ckeditor5-dev-utils": "npm:@samhammer/ckeditor5-dev-utils@10.0.1"
   },
   "engines": {
     "node": ">=6.9.0",
