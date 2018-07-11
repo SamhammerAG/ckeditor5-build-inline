@@ -11,12 +11,13 @@ const path = require('path');
 const webpack = require('webpack');
 const { bundler, styles } = require('@ckeditor/ckeditor5-dev-utils');
 const CKEditorWebpackPlugin = require('@ckeditor/ckeditor5-dev-webpack-plugin');
-const BabiliPlugin = require('babel-minify-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const buildConfig = require('./build-config');
 
 module.exports = {
 	devtool: 'source-map',
+	performance: { hints: false },
 
 	entry: path.resolve(__dirname, 'src', 'ckeditor.js'),
 
@@ -28,20 +29,34 @@ module.exports = {
 		library: buildConfig.moduleName
 	},
 
+	optimization: {
+		minimizer: [
+			// Use the newest version of UglifyJsWebpackPlugin that fixes the `inline` optimization bug.
+			// See https://github.com/webpack-contrib/uglifyjs-webpack-plugin/issues/264.
+			new UglifyJsWebpackPlugin({
+				sourceMap: true,
+				uglifyOptions: {
+					output: {
+						// Preserve CKEditor 5 license comments.
+						comments: /^!/
+					}
+				}
+			})
+		]
+	},
+
 	plugins: [
 		new CKEditorWebpackPlugin({
 			language: buildConfig.config.language,
 			additionalLanguages: 'all'
 		}),
-		new BabiliPlugin(null, {
-			comments: false
-		}),
 		new webpack.BannerPlugin({
 			banner: bundler.getLicenseBanner(),
 			raw: true
 		}),
-		new ExtractTextPlugin('ckeditor.css'),
-		new webpack.optimize.ModuleConcatenationPlugin()
+		new MiniCssExtractPlugin({
+			filename: "ckeditor.css"
+		})
 	],
 
 	module: {
@@ -52,20 +67,23 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: [
-						{
-							loader: 'postcss-loader',
-							options: styles.getPostCssConfig({
-								themeImporter: {
-									themePath: require.resolve('@ckeditor/ckeditor5-theme-lark')
-								},
-								minify: true
-							})
-						}
-					]
-				})
+				use: [
+					{
+						loader: MiniCssExtractPlugin.loader
+					},
+					{
+						loader: "css-loader"
+					},
+					{
+						loader: 'postcss-loader',
+						options: styles.getPostCssConfig({
+							themeImporter: {
+								themePath: require.resolve('@ckeditor/ckeditor5-theme-lark')
+							},
+							minify: true
+						})
+					}
+				]
 			}
 		]
 	}
