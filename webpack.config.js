@@ -16,75 +16,75 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const buildConfig = require('./build-config');
 
 module.exports = {
-	devtool: 'source-map',
-	performance: { hints: false },
+    devtool: 'source-map',
+    performance: { hints: false },
 
-	entry: path.resolve(__dirname, 'src', 'ckeditor.js'),
+    entry: path.resolve(__dirname, 'src', 'ckeditor.js'),
 
-	output: {
-		path: path.resolve(__dirname, 'build'),
-		filename: 'ckeditor.js',
-		libraryTarget: 'umd',
-		libraryExport: 'default',
-		library: buildConfig.moduleName
-	},
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        filename: 'ckeditor.js',
+        libraryTarget: 'umd',
+        libraryExport: 'default',
+        library: buildConfig.moduleName
+    },
 
-	optimization: {
-		minimizer: [
-			// Use the newest version of UglifyJsWebpackPlugin that fixes the `inline` optimization bug.
-			// See https://github.com/webpack-contrib/uglifyjs-webpack-plugin/issues/264.
-			new UglifyJsWebpackPlugin({
-				sourceMap: true,
-				uglifyOptions: {
-					output: {
-						// Preserve CKEditor 5 license comments.
-						comments: /^!/
-					}
-				}
-			})
-		]
-	},
+    optimization: {
+        minimizer: [
+            // Use the newest version of UglifyJsWebpackPlugin that fixes the `inline` optimization bug.
+            // See https://github.com/webpack-contrib/uglifyjs-webpack-plugin/issues/264.
+            new UglifyJsWebpackPlugin({
+                sourceMap: true,
+                uglifyOptions: {
+                    output: {
+                        // Preserve CKEditor 5 license comments.
+                        comments: /^!/
+                    }
+                }
+            })
+        ]
+    },
 
-	plugins: [
-		new CKEditorWebpackPlugin({
-			language: buildConfig.config.language,
-			additionalLanguages: 'all'
-		}),
-		new webpack.BannerPlugin({
-			banner: bundler.getLicenseBanner(),
-			raw: true
-		}),
-		new MiniCssExtractPlugin({
-			filename: "ckeditor.css"
-		})
-	],
+    plugins: [
+        new CKEditorWebpackPlugin({
+            language: buildConfig.config.language,
+            additionalLanguages: 'all'
+        }),
+        new webpack.BannerPlugin({
+            banner: bundler.getLicenseBanner(),
+            raw: true
+        }),
+        new MiniCssExtractPlugin({
+            filename: "ckeditor.css"
+        })
+    ],
 
-	module: {
-		rules: [
-			{
-				test: /\.svg$/,
-				use: ['raw-loader']
-			},
-			{
-				test: /\.css$/,
-				use: [
-					{
-						loader: MiniCssExtractPlugin.loader
-					},
-					{
-						loader: "css-loader"
-					},
-					{
-						loader: 'postcss-loader',
-						options: styles.getPostCssConfig({
-							themeImporter: {
-								themePath: require.resolve('@ckeditor/ckeditor5-theme-lark')
-							},
-							minify: true
-						})
-					}
-				]
-			}
-		]
-	}
+    module: {
+        rules: [
+            {
+                test: /\.svg$/,
+                use: ['raw-loader']
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: "css-loader"
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: styles.getPostCssConfig({
+                            themeImporter: {
+                                themePath: require.resolve('@ckeditor/ckeditor5-theme-lark')
+                            },
+                            minify: true
+                        })
+                    }
+                ]
+            }
+        ]
+    }
 };
