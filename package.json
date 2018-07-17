@@ -65,6 +65,8 @@
     "url": "https://github.com/SamhammerAG/ckeditor5-build-inline.git"
   },
   "scripts": {
-    "build": "node bin/create-entry-file.js && webpack --mode production"
+    "build": "node bin/create-entry-file.js && webpack --mode production",
+	"bootstrap": "lerna bootstrap && yarn link",
+	"clean": "yarn unlink && lerna clean --yes"
   }
 }
