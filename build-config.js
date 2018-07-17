@@ -32,7 +32,8 @@ module.exports = {
         '@ckeditor/ckeditor5-list/src/list',
         '@ckeditor/ckeditor5-paragraph/src/paragraph',
         '@ckeditor/ckeditor5-table/src/table',
-        '@ckeditor/ckeditor5-table/src/tabletoolbar'
+        '@ckeditor/ckeditor5-table/src/tabletoolbar',
+        '@samhammer/ckeditor5-demo-plugin/src/demo'
     ],
 
     // Editor config.
@@ -50,7 +51,8 @@ module.exports = {
                 'imageUpload',
                 'blockQuote',
                 'undo',
-                'redo'
+                'redo',
+                'demoButton'
             ]
         },
 
