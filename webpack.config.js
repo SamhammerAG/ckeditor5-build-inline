@@ -13,7 +13,6 @@ const { bundler, styles } = require('@ckeditor/ckeditor5-dev-utils');
 const CKEditorWebpackPlugin = require('@ckeditor/ckeditor5-dev-webpack-plugin');
 const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const buildConfig = require('./build-config');
 
 module.exports = {
     devtool: 'source-map',
@@ -26,7 +25,7 @@ module.exports = {
         filename: 'ckeditor.js',
         libraryTarget: 'umd',
         libraryExport: 'default',
-        library: buildConfig.moduleName
+        library: 'InlineEditor'
     },
 
     optimization: {
@@ -47,7 +46,7 @@ module.exports = {
 
     plugins: [
         new CKEditorWebpackPlugin({
-            language: buildConfig.config.language,
+            language: 'en',
             additionalLanguages: 'all'
         }),
         new webpack.BannerPlugin({
