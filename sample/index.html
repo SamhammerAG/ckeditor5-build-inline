@@ -30,7 +30,12 @@
 <script src="../build/ckeditor.js"></script>
 <script src="../build/translations/de.js"></script>
 <script>
-	InlineEditor.create(document.querySelector('#editor'), {language: 'de'})
+	InlineEditor.create(document.querySelector('#editor'), {
+		language: 'de',
+		internallink: {
+                       testmode: true
+                    }
+		})
 		.then(editor => {
 			window.editor = editor;
 		})
