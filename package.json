@@ -67,6 +67,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
+	"builddev": "webpack --mode development",
     "preversion": "npm run build; if [ -n \"$(git status src/ckeditor.js build/ --porcelain)\" ]; then git add -u src/ckeditor.js build/ && git commit -m 'Internal: Build.'; fi",
     "bootstrap": "lerna bootstrap && yarn link",
     "clean": "yarn unlink && lerna clean --yes"
