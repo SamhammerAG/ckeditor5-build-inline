@@ -1,5 +1,5 @@
 {
-  "name": "@samhammer/ckeditor5-build-inline",
+  "name": "@samhammer/ssp-ckeditor5-build-inline",
   "version": "10.1.2",
   "description": "The inline editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
