@@ -61,6 +61,20 @@ InlineEditor
 	});
 ```
 
+## How to publish
+
+For publishing an npm account that is referenced to the organization is required.
+
+See the following how to:
+
+https://yarnpkg.com/en/docs/publishing-a-package
+
+If everything is configured correctly just count up the version number in our package.json and execute the following command:
+
+```bash
+yarn publish
+```
+
 ## License
 
 Licensed under the terms of [GNU General Public License Version 2 or later](http://www.gnu.org/licenses/gpl.html). For full details about the license, please check the `LICENSE.md` file.
