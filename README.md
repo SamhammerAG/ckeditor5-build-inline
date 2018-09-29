@@ -16,7 +16,7 @@ See also: lerna.json
 ### Step 2
 After checkout the project has to be initialized once before building it.
 
-Ensure that you have installed lerna.
+Ensure that you have a global installation of lerna 2.x.
 
 Just run the following command to initialize the project and make it linkable (see further information below):
 ```bash

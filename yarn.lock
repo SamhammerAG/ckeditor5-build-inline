@@ -251,9 +251,9 @@
     "@ckeditor/ckeditor5-ui" "^11.0.0"
     "@ckeditor/ckeditor5-utils" "^10.2.0"
 
-"@samhammer/ckeditor5-internallink-plugin@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@samhammer/ckeditor5-internallink-plugin/-/ckeditor5-internallink-plugin-1.0.3.tgz#bf8de70f52abaaa6276b0cf1a627b23de78a5b07"
+"@samhammer/ckeditor5-internallink-plugin@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@samhammer/ckeditor5-internallink-plugin/-/ckeditor5-internallink-plugin-1.0.4.tgz#48cb4714d587314bb186b6f63e03133032eeeb47"
   dependencies:
     "@ckeditor/ckeditor5-core" "^11.0.0"
     "@ckeditor/ckeditor5-engine" "^10.2.0"
