@@ -1,6 +1,6 @@
 {
   "name": "@samhammer/ssp-ckeditor5-build-inline",
-  "version": "10.1.8",
+  "version": "10.1.9",
   "description": "The inline editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -42,7 +42,7 @@
     "@ckeditor/ckeditor5-table": "^10.1.0",
     "@ckeditor/ckeditor5-theme-lark": "^11.0.0",
     "@ckeditor/ckeditor5-upload": "^10.0.2",
-    "@samhammer/ckeditor5-internallink-plugin": "1.0.4",
+    "@samhammer/ckeditor5-internallink-plugin": "1.0.5",
     "css-loader": "^0.28.11",
     "fs-extra": "^6.0.1",
     "mini-css-extract-plugin": "^0.4.1",
