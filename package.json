@@ -69,6 +69,7 @@
     "build": "webpack --mode production",
     "builddev": "webpack --mode development",
     "bootstrap": "lerna bootstrap && yarn link",
-    "clean": "yarn unlink && lerna clean --yes"
+    "clean": "yarn unlink && lerna clean --yes",
+    "sample": "start ./sample/index.html"
   }
 }
