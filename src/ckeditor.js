@@ -19,7 +19,8 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import InternalLinkPlugin from '@samhammer/ckeditor5-internallink-plugin/src/internalLink';
+import InternalLink from '@samhammer/ckeditor5-internallink-plugin/src/internalLink';
+import SimpleImageUpload from '@samhammer/ckeditor5-simple-image-upload-plugin/src/simple-upload-image-plugin';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -44,7 +45,8 @@ InlineEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
-	InternalLinkPlugin,
+    InternalLink,
+    SimpleImageUpload,
 	Link,
 	List,
 	MediaEmbed,

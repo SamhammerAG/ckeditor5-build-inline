@@ -323,7 +323,7 @@
     "@ckeditor/ckeditor5-engine" "^11.0.0"
     "@ckeditor/ckeditor5-ui" "^11.1.0"
 
-"@ckeditor/ckeditor5-upload@^10.0.3":
+"@ckeditor/ckeditor5-upload@^10.0.2", "@ckeditor/ckeditor5-upload@^10.0.3":
   version "10.0.3"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-upload/-/ckeditor5-upload-10.0.3.tgz#ea19d28abcbe6abd421bbcb6af06bbb18415a127"
   dependencies:
@@ -364,6 +364,13 @@
     "@ckeditor/ckeditor5-ui" "^11.0.0"
     awesomplete "^1.1.2"
     axios "^0.18.0"
+
+"@samhammer/ckeditor5-simple-image-upload-plugin@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@samhammer/ckeditor5-simple-image-upload-plugin/-/ckeditor5-simple-image-upload-plugin-1.0.2.tgz#32fc9067258f75229f65ccb1ca7150ad2f43a4cb"
+  dependencies:
+    "@ckeditor/ckeditor5-core" "^11.0.0"
+    "@ckeditor/ckeditor5-upload" "^10.0.2"
 
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
