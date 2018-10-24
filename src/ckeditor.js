@@ -22,8 +22,10 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import InternalLinkPlugin from '@samhammer/ckeditor5-internallink-plugin/src/internalLink';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
+import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
-import TablePlugin from '@ckeditor/ckeditor5-table/src/table';
+import Table from '@ckeditor/ckeditor5-table/src/table';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -45,8 +47,10 @@ InlineEditor.builtinPlugins = [
 	InternalLinkPlugin,
 	Link,
 	List,
+	MediaEmbed,
 	Paragraph,
-	TablePlugin
+	Table,
+	TableToolbar
 ];
 
 // Editor configuration.
@@ -63,6 +67,7 @@ InlineEditor.defaultConfig = {
 			'insertTable',
 			'imageUpload',
 			'blockQuote',
+			'mediaEmbed',
 			'undo',
 			'redo',
 			'internalLink'
@@ -77,7 +82,7 @@ InlineEditor.defaultConfig = {
 		]
 	},
 	table: {
-		toolbar: [
+		contentToolbar: [
 			'tableColumn',
 			'tableRow',
 			'mergeTableCells'
