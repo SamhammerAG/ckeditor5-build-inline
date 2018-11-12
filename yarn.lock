@@ -131,7 +131,7 @@
     "@ckeditor/ckeditor5-core" "^11.0.1"
     "@ckeditor/ckeditor5-utils" "^11.0.0"
 
-"@ckeditor/ckeditor5-core@^11.0.0", "@ckeditor/ckeditor5-core@^11.0.1":
+"@ckeditor/ckeditor5-core@^11.0.1":
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-core/-/ckeditor5-core-11.0.1.tgz#c2ec8bb66f4e3a36dbb8a877583be32d0bcc0b51"
   dependencies:
@@ -187,12 +187,6 @@
     "@ckeditor/ckeditor5-ui" "^11.1.0"
     "@ckeditor/ckeditor5-utils" "^11.0.0"
     lodash-es "^4.17.10"
-
-"@ckeditor/ckeditor5-engine@^10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-engine/-/ckeditor5-engine-10.2.0.tgz#f4cf448c0482233557f48d4b9a97baa571c0e9cc"
-  dependencies:
-    "@ckeditor/ckeditor5-utils" "^10.2.0"
 
 "@ckeditor/ckeditor5-engine@^11.0.0":
   version "11.0.0"
@@ -306,7 +300,7 @@
     "@ckeditor/ckeditor5-engine" "^11.0.0"
     "@ckeditor/ckeditor5-utils" "^11.0.0"
 
-"@ckeditor/ckeditor5-ui@^11.0.0", "@ckeditor/ckeditor5-ui@^11.1.0":
+"@ckeditor/ckeditor5-ui@^11.1.0":
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-ui/-/ckeditor5-ui-11.1.0.tgz#d293ae798bea6f356041b1f0b49f10fc124a6abe"
   dependencies:
@@ -323,7 +317,7 @@
     "@ckeditor/ckeditor5-engine" "^11.0.0"
     "@ckeditor/ckeditor5-ui" "^11.1.0"
 
-"@ckeditor/ckeditor5-upload@^10.0.2", "@ckeditor/ckeditor5-upload@^10.0.3":
+"@ckeditor/ckeditor5-upload@^10.0.3":
   version "10.0.3"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-upload/-/ckeditor5-upload-10.0.3.tgz#ea19d28abcbe6abd421bbcb6af06bbb18415a127"
   dependencies:
@@ -331,12 +325,6 @@
     "@ckeditor/ckeditor5-engine" "^11.0.0"
     "@ckeditor/ckeditor5-ui" "^11.1.0"
     "@ckeditor/ckeditor5-utils" "^11.0.0"
-
-"@ckeditor/ckeditor5-utils@^10.2.0":
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-utils/-/ckeditor5-utils-10.2.1.tgz#08268ddb79eddbb2b62acd4d2e04935b2dc75cc6"
-  dependencies:
-    ckeditor5 "^11.0.1"
 
 "@ckeditor/ckeditor5-utils@^11.0.0":
   version "11.0.0"
@@ -355,22 +343,24 @@
     "@ckeditor/ckeditor5-ui" "^11.1.0"
     "@ckeditor/ckeditor5-utils" "^11.0.0"
 
-"@samhammer/ckeditor5-internallink-plugin@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@samhammer/ckeditor5-internallink-plugin/-/ckeditor5-internallink-plugin-1.0.5.tgz#5cc534aeb7205c523436f84c145b2a1f3f2fae10"
+"@samhammer/ckeditor5-internallink-plugin@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@samhammer/ckeditor5-internallink-plugin/-/ckeditor5-internallink-plugin-1.0.6.tgz#4dcd1d960b39312de9873c8c4e25e1d570c7ce08"
+  integrity sha512-QiJPrVFQzkIAhz6ozf7S2a3yAMbm8ACA3v0LUr7b99VyC/DykkYDzzefYcGSxepDqZq5ThlTG5qbHJmfiVcVqA==
   dependencies:
-    "@ckeditor/ckeditor5-core" "^11.0.0"
-    "@ckeditor/ckeditor5-engine" "^10.2.0"
-    "@ckeditor/ckeditor5-ui" "^11.0.0"
+    "@ckeditor/ckeditor5-core" "^11.0.1"
+    "@ckeditor/ckeditor5-engine" "^11.0.0"
+    "@ckeditor/ckeditor5-ui" "^11.1.0"
     awesomplete "^1.1.2"
     axios "^0.18.0"
 
-"@samhammer/ckeditor5-simple-image-upload-plugin@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@samhammer/ckeditor5-simple-image-upload-plugin/-/ckeditor5-simple-image-upload-plugin-1.0.2.tgz#32fc9067258f75229f65ccb1ca7150ad2f43a4cb"
+"@samhammer/ckeditor5-simple-image-upload-plugin@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@samhammer/ckeditor5-simple-image-upload-plugin/-/ckeditor5-simple-image-upload-plugin-1.0.3.tgz#1b4a64849f164038ce8f4f05ceb4dea4d4a9f77f"
+  integrity sha512-JjxEUhlGAFUcKjI4QGLLypfq1iUK5BCkJ3mKwb02SwdE7fVN90ZGSqErotuFjqgsWndxlcp3f3dvLhy23MYrng==
   dependencies:
-    "@ckeditor/ckeditor5-core" "^11.0.0"
-    "@ckeditor/ckeditor5-upload" "^10.0.2"
+    "@ckeditor/ckeditor5-core" "^11.0.1"
+    "@ckeditor/ckeditor5-upload" "^10.0.3"
 
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
@@ -933,7 +923,7 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-ckeditor5@^11.0.1, ckeditor5@^11.1.0:
+ckeditor5@^11.1.0:
   version "11.1.1"
   resolved "https://registry.yarnpkg.com/ckeditor5/-/ckeditor5-11.1.1.tgz#f2da24b01a659e848ef6a4dd125ff5cc9e1cb06f"
 
